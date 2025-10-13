@@ -69,3 +69,12 @@ history = model.fit(x_train, y_train, epochs=1, batch_size=8)
 # Print success message
 print("MobileNetV2 model created and trained successfully!")
 print("This model is ready for fruit freshness detection with real data.")
+
+
+"""
+This code sets up a MobileNetV2 AI model for fruit freshness detection. 
+Currently it's practicing with random data, but we'll soon train it with real fruit images 
+to distinguish between fresh and spoiled apples and bananas.
+
+
+"""
