@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RipePick - AI Fruit Freshness Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="centered-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="logo">
+                    <div class="logo-icon">🍎</div>
+                    <h1>RipePick</h1>
+                </div>
+                <p class="tagline">AI-powered fruit freshness detection</p>
+            </header>
+
+            <!-- Main Card -->
+            <div class="card">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <h3>Upload Fruit Image</h3>
+                    <p>Take a photo or choose from gallery</p>
+                    <input type="file" id="imageUpload" accept="image/*" capture="camera">
+                    <label for="imageUpload" class="upload-btn">Choose Image</label>
+                </div>
+
+                <!-- Image Preview -->
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <img id="preview" alt="Fruit preview">
+                    <button class="retake-btn" onclick="resetUpload()">Retake</button>
+                </div>
+
+                <!-- Analyze Button -->
+                <button class="analyze-btn" id="analyzeBtn" onclick="analyzeFruit()" disabled>
+                    <span class="btn-text">Analyze Freshness</span>
+                    <span class="btn-loading" style="display: none;">Analyzing...</span>
+                </button>
+
+                <!-- Results -->
+                <div class="results" id="results" style="display: none;">
+                    <div class="result-header">
+                        <h3>Analysis Result</h3>
+                        <div class="confidence-badge" id="confidenceBadge">95%</div>
+                    </div>
+                    <div class="result-content">
+                        <div class="fruit-status" id="fruitStatus">
+                            <span class="status-icon">✅</span>
+                            <span class="status-text" id="statusText">Fresh Apple</span>
+                        </div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" id="confidenceFill"></div>
+                        </div>
+                        <div class="recommendation" id="recommendation">
+                            This fruit appears to be in perfect condition for consumption.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Instant Scan</h4>
+                    <p>Get results in seconds</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h4>Mobile Friendly</h4>
+                    <p>Works on all devices</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <h4>AI Powered</h4>
+                    <p>Advanced detection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

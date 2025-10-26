@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Perfect centering wrapper */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.centered-container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for non-webkit browsers */
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Upload Area */
+.upload-area {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed #e1e5e9;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.upload-area:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.upload-area h3 {
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.upload-area p {
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.upload-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Preview */
+.preview-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.retake-btn {
+    background: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin: 0 auto;
+}
+
+.retake-btn:hover {
+    background: #cbd5e0;
+}
+
+/* Analyze Button */
+.analyze-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+}
+
+.analyze-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.analyze-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+}
+
+/* Results */
+.results {
+    background: #f7fafc;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-header h3 {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.confidence-badge {
+    background: #48bb78;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.fruit-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.status-icon {
+    font-size: 1.5rem;
+}
+
+.status-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.confidence-bar {
+    background: #e2e8f0;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78, #68d391);
+    border-radius: 10px;
+    transition: width 0.8s ease;
+    width: 0%;
+}
+
+.recommendation {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    border-left: 4px solid #48bb78;
+    text-align: left;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.feature {
+    text-align: center;
+    color: white;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.feature h4 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.feature p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Perfect Centering for All Screen Sizes */
+@media (max-width: 600px) {
+    .main-wrapper {
+        padding: 15px;
+        align-items: flex-start;
+    }
+    
+    .centered-container {
+        max-width: 100%;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .upload-area {
+        padding: 30px 15px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .main-wrapper {
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+/* Ensure everything stays centered on very tall screens */
+@media (min-height: 800px) {
+    .main-wrapper {
+        align-items: center;
+    }
+}
