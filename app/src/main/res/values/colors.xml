@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Color System -->
+    <color name="primary">#6750A4</color>
+    <color name="primary_dark">#5C42A4</color>
+    <color name="primary_light">#EADDFF</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Adding the missing colors -->
+    <color name="primary_container">#EADDFF</color>
+    <color name="on_primary_container">#21005D</color>
+
+    <color name="secondary">#625B71</color>
+    <color name="secondary_container">#E8DEF8</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#1D192B</color>
+
+    <color name="tertiary">#7D5260</color>
+    <color name="tertiary_container">#FFD8E4</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="on_tertiary_container">#31111D</color>
+
+    <color name="background">#FFFBFE</color>
+    <color name="on_background">#1C1B1F</color>
+
+    <color name="surface">#FFFBFE</color>
+    <color name="surface_dark">#1C1B1F</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+
+    <color name="outline">#79747E</color>
+    <color name="outline_variant">#CAC4D0</color>
+
+    <color name="error">#B3261E</color>
+    <color name="error_container">#F9DEDC</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="on_error_container">#410E0B</color>
+
+    <!-- Custom App Colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+
+    <!-- Gradients -->
+    <color name="gradient_start">#667eea</color>
+    <color name="gradient_end">#764ba2</color>
+    <color name="success_gradient_start">#4CAF50</color>
+    <color name="success_gradient_end">#45a049</color>
+    <color name="warning_gradient_start">#ff9800</color>
+    <color name="warning_gradient_end">#f57c00</color>
+    <color name="error_gradient_start">#f44336</color>
+    <color name="error_gradient_end">#d32f2f</color>
+</resources>
